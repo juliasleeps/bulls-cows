@@ -1,0 +1,44 @@
+h1 {
+    color:gray;
+    text-align: center;
+}
+#div1{
+    float: left;
+    text-align: right;
+    width: 50%;
+}
+#div2{
+    text-align: center;
+    margin: auto; 
+}
+#div0{
+    float: left;
+    width: 50%;
+}
+#top p{
+    line-height: 40%;
+}
+table {
+    display: inline-table; 
+    margin: 10px;
+    border-collapse: collapse;
+    border: gray;
+    width: 50%;
+}
+th{
+    background-color: gray;
+    color: white;
+    text-align: left;
+}
+#win{
+    font-size: 20px;
+}
+#footer {
+    position: fixed; 
+    left: 0; bottom: 0; 
+    color: gray;
+    padding: 10px;
+}
+a:visited{
+    color: gray;
+}

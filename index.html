@@ -1,0 +1,50 @@
+<!DOCTYPE htlm>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bulls & Cows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bools & Cows</h1>
+    <div id="div0">
+        <strong>Top results</strong>
+        <div id="top">
+            <p>1.</p>
+            <p>2.</p>
+            <p>3.</p>
+        </div>        
+    </div>
+    <div id="div1">
+        <strong>Rules:</strong><br>
+        Try to guess 4-digit secret number (the digits are all different)<br>
+        If the matching digits are in their right positions, they are "bulls", if in different positions, they are "cows"<br>
+    </div>
+    <div id="div2">
+        <table id="table" cellspacing="2" border= "1" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>Attempt</th>
+                    <th>Your guess</th>
+                    <th>Bulls</th>
+                    <th>Cows</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p id="win"></p>
+        <div id="inputdiv">
+            <label for="input">Enter a 4-digit guess. The digits must be all different</label>
+            <input type="text" id="input">
+            <input type="submit" value="Guess">             
+        </div>
+        <br>
+        <button id="reset">Reset Game</button>       
+    </div>
+    <div id="footer">
+        <a href="https://en.wikipedia.org/wiki/Bulls_and_Cows">Read more on Wiki</a>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
