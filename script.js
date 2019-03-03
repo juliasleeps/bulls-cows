@@ -16,6 +16,7 @@ let topTable = document.getElementById('top');
 let inputDiv = document.getElementById('inputdiv');
 
 createHiddentNumber();
+getFromLocalStorage();
 
 userInput.addEventListener('change', function(e){
     e.preventDefault();
@@ -27,7 +28,7 @@ userInput.addEventListener('change', function(e){
         checkWin();
     }
     this.value = '';
-})
+});
 
 resetButton.addEventListener('click', function(){
     hiddenNum = [];    
@@ -44,13 +45,13 @@ function addRow(att, val, bulls, cows){
     row.insertCell().innerHTML = val;
     row.insertCell().innerHTML = bulls;
     row.insertCell().innerHTML = cows;
-}
+};
 
 function clearTable(){
     while(resultTable.hasChildNodes()){
         resultTable.deleteRow(0);
     }
-}
+};
 
 function createHiddentNumber(){
     // make a random 4-digit secret number. The digits must be all different 
@@ -60,7 +61,7 @@ function createHiddentNumber(){
         hiddenNum.push(item);   
       }
     }   
-}
+};
 
 function validateInput(input){
     let validInput = null;
@@ -103,16 +104,17 @@ function checkWin(){
         saveTopResult(attempts);
         fillTopTable();  
     }
-}
+};
+
 function congrats(){
     resultTable.lastChild.style.backgroundColor = 'lightgreen';
     winMessage.innerHTML = `You did it! It took you ${attempts} ${attempts > 1 ? `attempts` : `attempt`} <br> Secret number is ${hiddenNum.join('')}`;
     inputDiv.style.display = 'none';
-}
+};
 
 function compareResult(objA, objB) {
     return objA.attempts - objB.attempts;
-  }
+};
 
 function saveTopResult(att){
     if (topResults.length < maxTopTableSize){
@@ -133,21 +135,19 @@ function saveTopResult(att){
             }
         }
     } 
-}
+};
 
 function fillTopTable(){
     for(let i = 0; i < topResults.length; i++){
         topTable.children[i].innerHTML = `${i + 1}. Name: ${topResults[i].name}, Attempts: ${topResults[i].attempts}`;
     }
-}
+};
 
-//save top result to storage
 function saveToLocalStorage(){
     var str = JSON.stringify(topResults);
     localStorage.setItem('topResults', str);
-}
+};
 
-//get top result from storage
 function getFromLocalStorage(){
     var str = localStorage.getItem('topResults');
     topResults = JSON.parse(str);
@@ -155,6 +155,4 @@ function getFromLocalStorage(){
         topResults = [];
     }
     fillTopTable(); 
-}
-
-getFromLocalStorage();
+};
