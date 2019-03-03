@@ -1,4 +1,4 @@
-h1 {
+h1{
     color:gray;
     text-align: center;
 }
@@ -33,7 +33,7 @@ th{
 #win{
     font-size: 20px;
 }
-#footer {
+#footer{
     position: fixed; 
     left: 0; bottom: 0; 
     color: gray;

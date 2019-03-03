@@ -60,7 +60,6 @@ function createHiddentNumber(){
         hiddenNum.push(item);   
       }
     }   
-    //console.log(`Hidden number: ${hiddenNum.join('')}`);
 }
 
 function validateInput(input){
